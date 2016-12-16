@@ -18,6 +18,8 @@ smhasher_ext = Extension('smhasher',
     sources=[
         'smhasher.cpp',
         'smhasher/MurmurHash3.cpp',
+        'smhasher/PMurHash.c',
+        'smhasher/PMurHash128.cpp',
         ],
     include_dirs=['smhasher'],
     define_macros=[('MODULE_VERSION', '"%s"' % VERSION)])
