@@ -169,11 +169,10 @@ py_pmurhash128_process(PyObject *self, PyObject *args)
 static PyObject *
 py_pmurhash128_result(PyObject *self, PyObject *args)
 {
-    const char *key;
     uint32_t len;
     PyObject *seed_obj, *carry_obj;
 
-    if (!PyArg_ParseTuple(args, "OOI", &seed_obj, &carry_obj, &key, &len)) {
+    if (!PyArg_ParseTuple(args, "OOI", &seed_obj, &carry_obj, &len)) {
         return NULL;
     }
     if (!PyLong_Check(seed_obj) || !PyLong_Check(carry_obj)) {
